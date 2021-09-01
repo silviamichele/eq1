@@ -1,0 +1,43 @@
+<!-- Peça ao usuário para digitar dez nomes. Exiba na tela todos os nomes digitados, porém de maneira invertida (do último para o primeiro) e em ordem de A-Z e quantidade de letras de cada nome, numa tabela de efeito zebrado, com texto em sublinhado. Armazene
+esses dados numa matriz. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+    <script src="js/q6.js"></script>
+    <link rel="stylesheet" href="css/q6.css">
+
+</head>
+
+<body>
+    <header>Questão 6<br> -------Lista de Exercício --------<br> Curso: Informática<br> Disciplina: Programação Web I <br>Equipe: Gleyce Vitória (2019322719)<br> Guilherme dos Santos (2019322915)<br> Rayane Quézia (2019322764)<br> Silvia Michele (2019322695)</header>
+    <main>
+        <div class="Botão">
+            <div class="input">
+                <label>Digite 10 nomes:</label>
+                <input type="text" id="Nomes" placeholder="Informe um nome por vez"></div>
+            <button onclick="Adicionar()">Enviar</button>
+        </div>
+        <br>
+        <div class="Conteúdo">
+            <u><table border="1">
+            <thead>
+                <th class="centralizado">Nomes</th>
+                <th class="centralizado">Quantidade de letras</th>
+
+            </thead>
+
+            <tbody id="tb" class="centralizado">
+
+
+            </tbody>
+        </table></u></div>
+</body>
+<button><a href="q0.html">voltar</a></button>
+</html>
+</main>

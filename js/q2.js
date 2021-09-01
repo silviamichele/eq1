@@ -1,3 +1,14 @@
+/* 
+-------Lista de Exercício --------
+Curso: Informática - 523
+Disciplina: Programação Web I
+Equipe 1: Gleyce, Rayane, Silvia e Guilherme
+Matrícula: Gleyce:2019322719;
+           Rayane: 2019322764;
+           Silvia : 2019322693;
+           Guilherme:2019322915.
+*/
+
 function fatorial(numero){
 	var i = numero;
 	while (i>1){

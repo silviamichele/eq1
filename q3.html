@@ -1,0 +1,50 @@
+<!--  Peça ao usuário para digitar dez números em uma caixa de texto. Verifique qual é o maior número, o menor número o número do meio e exiba-o. Exiba para todos os números, o mês do ano por extenso caso tiver no intervalo de 1-12, caso não informe que o
+mês é inválido. Coloque todos os resultados numa tabela zebrada. Crie uma função que faz essa verificação do mês. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <link rel="stylesheet" href="css/q3.css">
+</head>
+
+<body>
+    <header> Questão 3 <br> -------Lista de Exercício --------<br> Curso: Informática<br> Disciplina: Programação Web I <br>Equipe: Gleyce Vitória (2019322719)<br> Guilherme dos Santos (2019322915)<br> Rayane Quézia (2019322764)<br> Silvia Michele (2019322695)
+    </header>
+    <main>
+        <div class="Título">
+            <h2>Coletor de números (Digite 10 valores)</h2>
+
+        </div>
+        <div class="Botão">
+            <div class="input">
+                <label>Digite os números: </label>
+                <input type="number" name="numero" id='numero' placeholder="Informe um valor por vez" />
+            </div>
+            <button onclick="Enviar()">Enviar</button>
+        </div>
+
+        <p id="resultado"></p>
+        <div class="Conteúdo">
+            <table border="1">
+                <thead>
+                    <th class="centralizado">Mês</th>
+                    <th class="centralizado">valor</th>
+
+                </thead>
+
+                <tbody id="tb" class="centralizado">
+
+
+                </tbody>
+            </table>
+        </div>
+        <button><a href="q0.html">voltar</a></button>
+    <script src="js/q3.js"></script>
+</body>
+</html>
+</main>

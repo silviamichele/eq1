@@ -1,26 +1,40 @@
+/* 
+-------Lista de Exercício --------
+Curso: Informática - 523
+Disciplina: Programação Web I
+Equipe 1: Gleyce, Rayane, Silvia e Guilherme
+Matrícula: Gleyce:2019322719;
+           Rayane: 2019322764;
+           Silvia : 2019322693;
+           Guilherme:2019322915.
+*/
 function imc(peso, altura){
 	return Math.round(peso / (altura * altura));
 }
 //como pegar dados de um formulário
-var form = document.getElementById('form');
+var form = document.getElementById("form");
 
-form.addEventListener('submit', function(stop) {
+form.addEventListener("submit", function(stop) {
+ 	
  	var vetor = Array();
+
  	var maiorIMC = 0;
  	var idMaiorIMC;
+ 	
  	var menorIMC = 0;
  	var idMenorIMC;
+ 	
  	var numH = 0;
  	var numM = 0;
 
  	for(var x=1; x<=10; x++){
-
+ 		
  		var id = "pessoa "+x;
  		var strPeso = "peso"+x;
  		var strData = "data"+x;
  		var strAltura = "altura"+x;
  		var strSexo = "sexo"+x;
-
+ 		
  		peso = document.getElementById(strPeso).value;
  		altura = document.getElementById(strAltura).value;
  		sexo = document.getElementById(strSexo).value;
@@ -29,7 +43,7 @@ form.addEventListener('submit', function(stop) {
 
 		if (x == 1){
 			menorIMC = calcIMC;
-			idMenorIMC = id;
+			idMenorIMC = id; 
 		}
 		else if (calcIMC > maiorIMC){
 			maiorIMC = calcIMC;
@@ -53,7 +67,7 @@ form.addEventListener('submit', function(stop) {
  			'altura':altura,
  			'peso': peso,
  			'sexo': sexo,
- 			'data_nas':document.getElementById(strData).value,
+ 			'data_nas': document.getElementById(strData).value,
  		}
  		)
  		console.log(vetor.length);

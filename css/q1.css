@@ -1,0 +1,59 @@
+/*-------Lista de Exercício --------
+Curso: Informática
+Disciplina: Programação Web I
+Equipe:  Gleyce Vitória (2019322719), 
+Guilherme dos Santos(2019322915), 
+Rayane Quézia (2019322764), 
+Silvia Michele(2019322693)*/
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: black;
+}
+
+#res {
+  color: blue;
+  font-weight: bold;
+}
+
+#res2 {
+  color: red;
+  font-weight: bold;
+}
+
+#res3 {
+  color: green;
+  font-weight: bold;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  display: table-cell;
+  float: right;
+}
+
+#Lista {
+  text-align: left;
+  display: table-cell;
+  width: 300px;
+}
+
+html {
+  background-color: #808080;
+}
+
+body {
+  width: 1000px;
+  margin: auto;
+  background-color: #90ee90;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+form {
+  position: relative;
+}

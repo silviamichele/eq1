@@ -3,133 +3,155 @@
 <head>
 	<meta charset="utf-8">
 	<title>Questão 2</title>
+	<link rel="stylesheet" type="text/css" href="css/q2.css">
 </head>
 <body>
-	<div>
+<!-- Faça um programa que entre com oito números e imprima o quadrado, o fatorial  e raiz quadrada arredondado para duas casas decimais. Colocar cada número  
+numa tabela (Incluir o cabeçalho informando o tipo de operação). Crie uma  
+função para cada um desses cálculos. Para cada um use as seguintes cores:  
+(vermelho, roxo, rosa) -->
+
+
+<!--
+-------Lista de Exercício --------
+Curso: Informática
+Disciplina: Programação Web I
+Equipe: Gleyce Vitória (2019322719), Guilherme dos Santos (2019322915), Rayane Quézia (2019322764), Silvia Michele (2019322695)
+-->
+	<header>
+		<span id="eq">Equipe E</span>
+		<span id="if">IFAL</span>
+	</header>
+	<div class="input">
+		<h2>Digite os valores:</h2>
+		<hr>
+		<input type="number" id="num1" placeholder="Digite um número..."><br>
+		<input type="number" id="num2" placeholder="Digite um número..."><br>
+		<input type="number" id="num3" placeholder="Digite um número..."><br>
+		<input type="number" id="num4" placeholder="Digite um número..."><br>
+		<input type="number" id="num5" placeholder="Digite um número..."><br>
+		<input type="number" id="num6" placeholder="Digite um número..."><br>
+		<input type="number" id="num7" placeholder="Digite um número..."><br>
+		<input type="number" id="num8" placeholder="Digite um número..."><br>
+		<button onclick="main()">Submeter</button>
+	</div>
+	<div class="tabelas">
 		<table>
 			<tr>
-				<th>Numero <span id="numt1"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num1r"></td>
-				<td id="num1q"></td>
-				<td id="num1f"></td>
+				<td id="numt1">valor</td>
+				<td id="num1r" class="vermelho">valor</td>
+				<td id="num1q" class="roxo">valor</td>
+				<td id="num1f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt2"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num2r"></td>
-				<td id="num2q"></td>
-				<td id="num2f"></td>
+				<td id="numt2">valor</td>
+				<td id="num2r" class="vermelho">valor</td>
+				<td id="num2q" class="roxo">valor</td>
+				<td id="num2f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt3"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num3r"></td>
-				<td id="num3q"></td>
-				<td id="num3f"></td>
+				<td id="numt3">valor</td>
+				<td id="num3r" class="vermelho">valor</td>
+				<td id="num3q" class="roxo">valor</td>
+				<td id="num3f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt4"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num4r"></td>
-				<td id="num4q"></td>
-				<td id="num4f"></td>
+				<td id="numt4">valor</td>
+				<td id="num4r" class="vermelho">valor</td>
+				<td id="num4q" class="roxo">valor</td>
+				<td id="num4f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt5"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num5r"></td>
-				<td id="num5q"></td>
-				<td id="num5f"></td>
+				<td id="numt5">valor</td>
+				<td id="num5r" class="vermelho">valor</td>
+				<td id="num5q" class="roxo">valor</td>
+				<td id="num5f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt6"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num6r"></td>
-				<td id="num6q"></td>
-				<td id="num6f"></td>
+				<td id="numt6">valor</td>
+				<td id="num6r" class="vermelho">valor</td>
+				<td id="num6q" class="roxo">valor</td>
+				<td id="num6f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt7"></span></th>
+				<th>Número</th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num7r"></td>
-				<td id="num7q"></td>
-				<td id="num7f"></td>
+				<td id="numt7">valor</td>
+				<td id="num7r" class="vermelho">valor</td>
+				<td id="num7q" class="roxo">valor</td>
+				<td id="num7f" class="rosa">valor</td>
 			</tr>
 		</table>
 		<table>
 			<tr>
-				<th>Numero <span id="numt8"></span></th>
+				<th>Número </th>
 				<th>Raiz</th>
 				<th>Quadrado</th>
 				<th>Fatorial</th>
 			</tr>
 			<tr>
-				<td></td>
-				<td id="num8r"></td>
-				<td id="num8q"></td>
-				<td id="num8f"></td>
+				<td id="numt8">valor</td>
+				<td id="num8r" class="vermelho">valor</td>
+				<td id="num8q" class="roxo">valor</td>
+				<td id="num8f" class="rosa">valor</td>
 			</tr>
 		</table> 
 	</div>
-	<div>
-		<input type="text" id="num1"><br>
-		<input type="text" id="num2"><br>
-		<input type="text" id="num3"><br>
-		<input type="text" id="num4"><br>
-		<input type="text" id="num5"><br>
-		<input type="text" id="num6"><br>
-		<input type="text" id="num7"><br>
-		<input type="text" id="num8"><br>
-		<button onclick="main()">Submeter</button>
-	</div>
+	<footer>
+		<button type="button"><a href="q0.html">Voltar</a></button>
+	</footer>
 </body>
 <script type="text/javascript" src="js/q2.js"></script>
 </html>

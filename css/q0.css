@@ -1,0 +1,88 @@
+/*-------Lista de Exercício --------
+Curso: Informática
+Disciplina: Programação Web I
+Equipe:  Gleyce Vitória (2019322719), 
+Guilherme dos Santos(2019322915), 
+Rayane Quézia (2019322764), 
+Silvia Michele(2019322693)*/
+img {
+	width: 200px;
+  height: 200px;
+  display: table-cell;
+  float: left;
+}
+ .Lista {
+ 		text-align: left;
+  	display: table-cell;
+  	width: 300px;
+  } 
+footer a button{
+  padding: 5px 10px;
+  }
+
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {
+padding: 300 px;
+text
+}
+td button {
+		background-color: inherit;
+		border: none;
+}
+
+th {
+background-color: green ;
+color: white;
+font-family: sans-serif;
+}
+
+table tr:nth-child(odd) {
+background-color: gray;
+} 
+table tr:nth-child(even) {
+background-color: white;
+} 
+						
+html {
+background-color:  #808080;
+}
+	
+body {
+width: 1000px;
+ margin: auto;
+background-color: #98FB98;
+padding: 0 20px 20px 20px;
+border: 5px solid black;
+}
+h1 {
+margin: 0;
+padding: 20px 0;
+color: #363636;
+text-shadow: 2px 2px 2px black;
+text-align: center;	
+}
+
+h2{
+	text-align: center;	
+
+}
+ul {
+margin: auto;
+padding: 20px 0;
+color: black;
+}
+table {
+margin: auto;
+text-align: center;
+width: 200 px;
+height: 200 px;
+}
+main {
+	background-color: gray;
+	width: 1000 px;
+	height: 77 px;
+	position: relative;
+}

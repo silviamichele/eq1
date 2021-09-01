@@ -2,47 +2,54 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Questão 2</title>
+	<title>Questão 5</title>
+	<link rel="stylesheet" type="text/css" href="css/q5.css">
 </head>
-<style type="text/css">
-	table, th, td{
-		border-collapse: collapse;
-	}
-</style>
 <body>
-	<header>Header</header>
-	<!-- Crie um programa que entre com os dados de altura, peso, data de nascimento e
-sexo de dez pessoas num formulário e salve num vetor de objetos ao clicar no
+	<header>
+		<span id="eq">Equipe E</span>
+		<span id="if">IFAL</span>
+	</header>
+	<!-- Crie um programa que entre com os dados de altura, peso, data de nascimento e sexo de dez pessoas num formulário e salve num vetor de objetos ao clicar no
 adicionar. Imprima na tela quantas pessoas são do sexo feminino e quantas
 pessoas são do sexo masculino. Mostre quem é o maior obeso e o mais
 desnutrido segundo o IMC. Crie uma função que calcula o IMC. -->
+<!--
+-------Lista de Exercício --------
+Curso: Informática
+Disciplina: Programação Web I
+Equipe:  Gleyce Vitória (2019322719), Guilherme dos Santos(2019322915), Rayane Quézia (2019322764), Silvia Michele(2019322693)
+--> 
 	<div class="tables">
 		<table>
 			<tr>
-				<th>maior imc</th>
-				<th>menor imc</th>
+				<th>Maior IMC</th>
+				<th>Menor IMC</th>
 			</tr>
 			<tr>
-				<td id="maiorimc"></td>
-				<td id="menorimc"></td>
+				<td id="maiorimc">valor</td>
+				<td id="menorimc">valor</td>
 			</tr>
 			<tr>
-				<td id="pessoamaiorimc"></td>
-				<td id="pessoamenorimc"></td>
+				<td id="pessoamaiorimc">valor</td>
+				<td id="pessoamenorimc">valor</td>
 			</tr>
 		</table>
 		<table>
+			
+		</table>
+		<table>
 			<tr>
-				<th>mulheres</th>
-				<th>homens</th>
+				<th>Mulheres</th>
+				<th>Homens</th>
 			</tr>
 			<tr>
-				<td id="qtdm"></td>
-				<td id="qtdh"></td>
+				<td id="qtdm">valor</td>
+				<td id="qtdh">valor</td>
 			</tr>
 		</table>
 	</div>
-	<form action="." id="form">
+	<form action="#" id="form">
 		<div>
 			<p>Pessoa 1</p>
 			<label>Peso: <input type="text" id="peso1" required ></label>
@@ -173,8 +180,12 @@ desnutrido segundo o IMC. Crie uma função que calcula o IMC. -->
 				<option value="0">Masculino</option>
 			</select>
 		</div>
-		<input type="submit" value="enviar">
+		<div></div>
+		<div>
+			<input type="submit" value="adicionar" id="btn">
+		</div>
 	</form>
+	<button type="button"><a href="q0.html">Voltar</a></button>
 </body>
 <script type="text/javascript" src="js/q5.js">
 
