@@ -43,7 +43,10 @@ form.addEventListener("submit", function(stop) {
 
 		if (x == 1){
 			menorIMC = calcIMC;
-			idMenorIMC = id; 
+			idMenorIMC = id;
+
+			maiorIMC = calcIMC;
+			idMaiorIMC = id;
 		}
 		else if (calcIMC > maiorIMC){
 			maiorIMC = calcIMC;
@@ -72,7 +75,15 @@ form.addEventListener("submit", function(stop) {
  		)
  		console.log(vetor.length);
  	}
+ 	if (menorIMC >= 18.5){
+ 		idMenorIMC = "Não há nenhum desnutrido.";
+ 		menorIMC = 0;
+ 	}
 
+ 	if (maiorIMC <= 24.9){
+ 		idMaiorIMC = "Não há nenhum obeso.";
+ 		maiorIMC = 0;
+ 	}
 
 	document.getElementById("qtdm").innerHTML = numM;
 	document.getElementById("qtdh").innerHTML = numH;
