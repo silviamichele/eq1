@@ -11,11 +11,9 @@ Matrícula: Gleyce:2019322719;
 function imc(peso, altura){
 	return Math.round(peso / (altura * altura));
 }
-//como pegar dados de um formulário
 var form = document.getElementById("form");
 
 form.addEventListener("submit", function(stop) {
- 	
  	var vetor = Array();
 
  	var maiorIMC = 0;
@@ -28,7 +26,6 @@ form.addEventListener("submit", function(stop) {
  	var numM = 0;
 
  	for(var x=1; x<=10; x++){
- 		
  		var id = "pessoa "+x;
  		var strPeso = "peso"+x;
  		var strData = "data"+x;
@@ -56,7 +53,6 @@ form.addEventListener("submit", function(stop) {
 			menorIMC = calcIMC;
 			idMenorIMC = id;
 		}
-
 
 		if (sexo == 1){
 			numM += 1;
