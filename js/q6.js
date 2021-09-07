@@ -9,6 +9,7 @@ Matrícula: Gleyce:2019322719;
            Guilherme:2019322915.
 */
 const lista_de_nomes = []
+const lista_de_nomes_in = []
 var Matriz = Array();
 
 function Adicionar() {
@@ -16,11 +17,11 @@ function Adicionar() {
     var QL = ""
     var nome = document.getElementById('Nomes').value;
     lista_de_nomes.push(nome)
-    console.log(lista_de_nomes.sort())
+
 
     for (var i = 0; i < lista_de_nomes.length; i++) {
 
-        QL = lista_de_nomes[i].length
+
 
         var str = lista_de_nomes[i]
         var strin = ""
@@ -32,14 +33,30 @@ function Adicionar() {
             alert("Você ja digitou 10 nomes")
             break
         }
-        if (lista_de_nomes.length <= 10) {
+
+    }
+    lista_de_nomes_in.push(strin)
+
+    lista_de_nomes_in.sort()
+
+    for (var i = 0; i < lista_de_nomes_in.length; i++) {
+
+        QL = lista_de_nomes_in[i].length
+
+        var str = lista_de_nomes_in[i]
+        var str_in = ""
+
+        str_in += str
+
+        if (lista_de_nomes_in.length <= 10) {
 
 
-            tab = tab + "<tr><td>" + strin + "</td><td>" + QL + "</td></tr>"
+            tab = tab + "<tr><td>" + str_in + "</td><td>" + QL + "</td></tr>"
         }
 
     }
-    Matriz.push([strin, QL])
+
+    Matriz.push([str_in, QL])
 
     document.getElementById('tb').innerHTML = tab
     document.getElementById('Nomes').value = ''

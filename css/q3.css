@@ -6,80 +6,47 @@ Guilherme dos Santos(2019322915),
 Rayane Quézia (2019322764), 
 Silvia Michele(2019322693)*/
 * {
-    margin: 0%;
+    margin: 0;
+}
+
+label {
+    margin-left: 40%;
 }
 
 body {
+    background-color: lightgrey;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
 }
 
 header {
-    background-color: chartreuse;
+    background-color: rgb(184, 248, 89);
     padding: 20px;
-    color: rgb(255, 255, 255);
+    color: black;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
 }
 
-main {
-    padding: 10px 100px;
-}
-
-.Botão {
-    background: #fff;
-    border: 1px #fff;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 20px;
-}
-
-.input {
-    display: grid;
-    margin-bottom: 10px;
-}
-
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    padding: 10px;
-    background-color: bisque;
-    color: black;
-    border-radius: 3px;
-    font-weight: bold;
-    transition: all ease 0.3s;
-}
-button a{
-    color: #000;
-    text-decoration: none;
-}
-button:hover {
-    background-color: rgb(223, 166, 96);
-}
-
-.Conteúdo {
-    margin-top: 15px;
+h2 {
+    text-align: center;
+    margin-left: 5%;
 }
 
 table {
-    border-collapse: collapse;
     border: 1px solid #ccc;
-    width: 100%;
-}
-
-.centralizado {
-    text-align: center;
+    width: 50%;
+    margin-left: 30%;
 }
 
 table tr:nth-child(odd) {
     background-color: gray;
+    text-align: center;
 }
 
 table tr:nth-child(even) {
     background-color: white;
+    text-align: center;
+}
+
+thead {
+    padding: 20px;
 }

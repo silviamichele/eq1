@@ -43,7 +43,7 @@ function Enviar() {
             break
         }
 
-        if (lista_de_numeros.length < 10) {
+        if (lista_de_numeros.length <= 10) {
             tabela = tabela + "<tr><td>" + mes + "</td><td>" + lista_de_numeros[i] + "</td></tr>"
         }
     }
