@@ -8,7 +8,9 @@ Matrícula: Gleyce:2019322719;
            Silvia : 2019322693;
            Guilherme:2019322915.
 */
-function enviar(){
+var form = document.getElementById("form");
+
+form.addEventListener("submit", function(stop) {
   var idade1= document.getElementById("i1").value;
   var idade2= document.getElementById("i2").value;
   var idade3= document.getElementById("i3").value;
@@ -26,16 +28,16 @@ function enviar(){
   
   for ( var i = 0; i < 8 ; i++) {
     if (array_variaveis[i]>=16){
-      votantes += 1;
+    votantes += 1;
     }    
     if (array_variaveis[i]>=18){
-      maior_de_idade += 1;
-    }
+         maior_de_idade += 1;
+         }
     if (array_variaveis[i]>=65){
-      aposentados += 1;
-    }
-    if (array_variaveis[i] <=17){
-      menor_de_idade += 1;
+    aposentados += 1;
+  }
+    if (array_variaveis[i] <=17 && array_variaveis[i] >=0){
+    menor_de_idade += 1;
     }
   }
 
@@ -43,5 +45,6 @@ function enviar(){
     document.getElementById("pessoas_aposentadas").innerHTML = aposentados;
     document.getElementById("pessoas_maiores").innerHTML = maior_de_idade ;
     document.getElementById("pessoas_menores").innerHTML = menor_de_idade;
-  }
+  stop.preventDefault();
+});
 
