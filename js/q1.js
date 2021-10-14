@@ -39,7 +39,7 @@ function calcular() {
     }
 
     document.getElementById("res").innerHTML = "Resultado média:" + (somar(vetor) / vetor.length);
-    document.getElementById("res2").innerHTML = "Resultado mediana:" + (vetor[7]);
+    document.getElementById("res2").innerHTML = "Resultado mediana:" + (vetor[5]);
     document.getElementById("res3").innerHTML = "Resultado somatório:" + (somar(vetor));
     vetor = Array();
 }
