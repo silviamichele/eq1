@@ -16,6 +16,39 @@ tabela zebrada. Crie uma função que faz essa verificação do mês.*/
 
 const lista_de_numeros = []
 
+function mesArray(numero) {
+    if (numero > 0 && numero < 13) {
+        switch (numero) {
+            case 1:
+                return "Janeiro"
+            case 2:
+                return "Fevereiro"
+            case 3:
+                return "Março"
+            case 4:
+                return "Abril"
+            case 5:
+                return "Maio"
+            case 6:
+                return "Junho"
+            case 7:
+                return "Julho"
+            case 8:
+                return "Agosto"
+            case 9:
+                return "Setembro"
+            case 10:
+                return "Outubro"
+            case 11:
+                return "Novembro"
+            case 12:
+                return "Dezembro"
+        }
+    } else {
+        return "Mês inválido"
+    }
+}
+
 function Enviar() {
     var numero = document.getElementById("numero").value;
 
@@ -45,38 +78,6 @@ function Enviar() {
 
         if (lista_de_numeros.length <= 10) {
             tabela = tabela + "<tr><td>" + mes + "</td><td>" + lista_de_numeros[i] + "</td></tr>"
-        }
-    }
-
-    function mesArray(lista_de_numeros) {
-        if (lista_de_numeros > 0 && lista_de_numeros < 13) {
-            if (lista_de_numeros === 1) {
-                return "Janeiro"
-            } else if (lista_de_numeros === 2) {
-                return "Fevereiro"
-            } else if (lista_de_numeros === 3) {
-                return "Março"
-            } else if (lista_de_numeros === 4) {
-                return "Abril"
-            } else if (lista_de_numeros === 5) {
-                return "Maio"
-            } else if (lista_de_numeros === 6) {
-                return "Junho"
-            } else if (lista_de_numeros === 7) {
-                return "Julho"
-            } else if (lista_de_numeros === 8) {
-                return "Agosto"
-            } else if (lista_de_numeros === 9) {
-                return "Setembro"
-            } else if (lista_de_numeros === 10) {
-                return "Outubro"
-            } else if (lista_de_numeros === 11) {
-                return "Novembro"
-            } else if (lista_de_numeros === 12) {
-                return "Dezembro"
-            }
-        } else {
-            return "Mês inválido"
         }
     }
 

@@ -1,3 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <link rel="stylesheet" href="css/q2.css">
+</head>
+
+<body>
+    <header>
+        <span id="eq">Equipe E</span>
+        <span id="if">IFAL</span>
+    </header>
+    <br>
+    <h2>Coletor de números (Digite 10 valores)</h2>
+    <br>
+    <div style="margin: 0 40%;">
+        <input type="number" name="numero" id='numero' style="padding:5%;" placeholder="Digite um número...">
+        <button onclick="Enviar()" style="padding:5%;">Enviar</button>
+    </div>
+    <br>
+    <p id="resultado"></p>
+    <br>
+    <table style="background-color: rgb(218, 211, 211);color:#000;border:0;">
+        <thead>
+            <th>Mês</th>
+            <th>valor</th>
+        </thead>
+
+        <tbody id="tb">
+        </tbody>
+    </table>
+
+    <button type="button"><a href="index.html" style="text-decoration:none; color:#fff;">Voltar</a></button>
+    <script src="js/q3.js"></script>
+</body>
+
+</html>
+
 <!--
 -------Lista de Exercício --------
 Curso: Informática
@@ -7,48 +49,3 @@ Equipe: Gleyce Vitória (2019322719), Guilherme dos Santos (2019322915), Rayane 
 
 <!--  Peça ao usuário para digitar dez números em uma caixa de texto. Verifique qual é o maior número, o menor número o número do meio e exiba-o. Exiba para todos os números, o mês do ano por extenso caso tiver no intervalo de 1-12, caso não informe que o
 mês é inválido. Coloque todos os resultados numa tabela zebrada. Crie uma função que faz essa verificação do mês. -->
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questão 3</title>
-    <link rel="stylesheet" href="css/q3.css">
-</head>
-
-<body>
-
-    <header> Questão 3 <br> -------Lista de Exercício --------<br> Curso: Informática<br> Disciplina: Programação Web I <br>Equipe: Gleyce Vitória (2019322719)<br> Guilherme dos Santos (2019322915)<br> Rayane Quézia (2019322764)<br> Silvia Michele (2019322695)
-    </header>
-
-    <br>
-    <h2>Coletor de números (Digite 10 valores)</h2>
-    <br>
-
-
-
-    <label>Digite os números: </label>
-    <input type="number" name="numero" id='numero' placeholder="Informe um valor por vez" />
-
-    <button onclick="Enviar()">Enviar</button>
-    <br>
-    <p id="resultado"></p>
-    <br>
-    <table border="1">
-        <thead>
-            <th class=>Mês</th>
-            <th class=>valor</th>
-        </thead>
-
-        <tbody id="tb">
-        </tbody>
-    </table>
-
-    <button><a href="index.html">voltar</a></button>
-    <script src="js/q3.js"></script>
-</body>
-
-</html>
