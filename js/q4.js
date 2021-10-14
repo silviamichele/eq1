@@ -8,43 +8,33 @@ Matrícula: Gleyce:2019322719;
            Silvia : 2019322693;
            Guilherme:2019322915.
 */
-var form = document.getElementById("form");
+// var form = document.getElementById("form");
+var array_variaveis = []
+var votantes = 0;
+var maior_de_idade = 0;
+var menor_de_idade = 0;
+var aposentados = 0;
 
-form.addEventListener("submit", function(stop) {
-  var idade1= document.getElementById("i1").value;
-  var idade2= document.getElementById("i2").value;
-  var idade3= document.getElementById("i3").value;
-  var idade4= document.getElementById("i4").value;
-  var idade5= document.getElementById("i5").value;
-  var idade6= document.getElementById("i6").value;
-  var idade7= document.getElementById("i7").value;
-  var idade8= document.getElementById("i8").value;
-  
-  var array_variaveis = [idade1, idade2, idade3,idade4,idade5,idade6,idade7,idade8]
-  var votantes = 0;
-  var maior_de_idade = 0;
-  var menor_de_idade = 0;
-  var aposentados = 0;
-  
-  for ( var i = 0; i < 8 ; i++) {
-    if (array_variaveis[i]>=16){
-    votantes += 1;
-    }    
-    if (array_variaveis[i]>=18){
-         maior_de_idade += 1;
-         }
-    if (array_variaveis[i]>=65){
-    aposentados += 1;
-  }
-    if (array_variaveis[i] <=17 && array_variaveis[i] >=0){
-    menor_de_idade += 1;
+function adicionar() {
+    var idade1 = document.getElementById("i1").value;
+    array_variaveis.push(idade1);
+    document.getElementById("idade").innerHTML = array_variaveis.join(", ");
+    array_variaveis.push(idade1);
+    if (idade1 >= 16) {
+        votantes += 1;
     }
-  }
+    if (idade1 >= 18) {
+        maior_de_idade += 1;
+    }
+    if (idade1 >= 65) {
+        aposentados += 1;
+    }
+    if (idade1 <= 17 && idade1 >= 0) {
+        menor_de_idade += 1;
+    }
 
     document.getElementById("pessoas_votantes").innerHTML = votantes;
     document.getElementById("pessoas_aposentadas").innerHTML = aposentados;
-    document.getElementById("pessoas_maiores").innerHTML = maior_de_idade ;
+    document.getElementById("pessoas_maiores").innerHTML = maior_de_idade;
     document.getElementById("pessoas_menores").innerHTML = menor_de_idade;
-  stop.preventDefault();
-});
-
+}
