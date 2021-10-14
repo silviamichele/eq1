@@ -1,3 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title> Lista 1 de Programação WEB- questão 1 </title>
+    <link rel="stylesheet" type="text/css" href="css/q5.css">
+</head>
+
+<body>
+    <!-- <header>
+        <div id="Lista">
+            <ul>
+                <li>IFAL - Instituto Federal de Educação, Ciência e Tecnologia de Alagoas</li>
+                <li>Endereço: Av. Alagoas - Palmeira de Fora, Palmeira dos Índios - AL, 57608-180</li>
+                <li>Curso: Informática</li>
+                <li>Disciplina: Programação Web</li>
+                <li>Ano Letivo: 2021</li>
+                <li>Docente: Ítalo Arruda</li>
+            </ul>
+        </div>
+
+    </header> -->
+    <header>
+        <span id="eq">Equipe E</span>
+        <span id="if">IFAL</span>
+    </header>
+
+    <h2 style="text-align:center;"> Digite as notas: </h2>
+    <span style="margin: 0px 40%;text-align:center;">
+		<input id="n1" type="number" style="padding: 10px;">
+		<button onclick="armazenar()">armazenar</button>
+		<br>
+		<p>notas digitadas = <span id="notas_digitadas"></span></p>
+    </span>
+    <div>
+        <p> Resposta:</p>
+        <ol>
+            <li>
+                <p id="res"></p>
+            </li>
+            <li>
+                <p id="res2"></p>
+            </li>
+            <li>
+                <p id="res3"></p>
+            </li>
+        </ol>
+    </div>
+    <footer>
+        <a href="index.html"><button>Voltar</button></a>
+    </footer>
+    <script src="js/q1.js"></script>
+</body>
+
+</html>
+
 <!-- 1. Calcule a média, mediana e o somatório de quinze notas digitadas pelo usuário.
 E exiba o resultado numa lista numerada onde cada resposta deve ter as cores azul, vermelho, verde, todos em negrito.-->
 
@@ -10,118 +67,3 @@ Matrícula: Gleyce:2019322719;
            Silvia : 2019322693;
            Guilherme:2019322915.
  -->
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-  <head>
-    <h1> QUESTÃO 1 </h1>
-    <meta charset="utf-8">
-    <title> Lista 1 de Programação WEB- questão 1 </title>
-    <link rel="Stylesheet" type="text/css" href="css/q1.css">
-  </head>
-
-  <body>
-    <header>
-      <img src="https://www2.ifal.edu.br/campus/palmeira/comunicacao/arquivos/logos-do-ifal-vertical.png/@@images/ac3e97aa-6806-4523-bc47-7bf3c0950b0f.png">
-
-      <div id="Lista">
-        <ul>
-          <li>IFAL - Instituto Federal de Educação, Ciência e Tecnologia de Alagoas</li>
-          <li>Endereço: Av. Alagoas - Palmeira de Fora, Palmeira dos Índios - AL, 57608-180</li>
-          <li>Curso: Informática</li>
-          <li>Disciplina: Programação Web</li>
-          <li>Ano Letivo: 2021</li>
-          <li>Docente: Ítalo Arruda</li>
-        </ul>
-      </div>
-
-    </header>
-
-    <h2> Digite suas notas abaixo: </h2>
-
-    <form action=".">
-      <span>
-        <label>Nota1</label>
-        <input id="n1" type="number"> <br>
-      </span>
-
-      <span>
-        <label>Nota2</label>
-        <input id="n2" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota3</label>
-        <input id="n3" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota4</label>
-        <input id="n4" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota5</label>
-        <input id="n5" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota6</label>
-        <input id="n6" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota7</label>
-        <input id="n7" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota8</label>
-        <input id="n8" type="number"> <br>
-      </span>
-
-      <span>
-        <label>Nota9</label>
-        <input id="n9" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota10</label>
-        <input id="n10" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota11</label>
-        <input id="n11" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota12</label>
-        <input id="n12" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota13</label>
-        <input id="n13" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota14</label>
-        <input id="n14" type="number"> <br>
-      </span>
-      <span>
-        <label>Nota15</label>
-        <input id="n15" type="number"> <br>
-      </span>
-      <p> Resposta:</p>
-      <ol>
-        <li>
-          <p id="res"></p>
-        </li>
-        <li>
-          <p id="res2"></p>
-        </li>
-        <li>
-          <p id="res3"></p>
-        </li>
-      </ol>
-
-      <button onclick="Calculo()" type="button"> Calcular</button>
-
-    </form>
-    <footer>
-      <a href="index.html"><button>Voltar</button></a>
-    </footer>
-  </body>
-<script src="js/q1.js"></script>
-</html>
