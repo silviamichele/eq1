@@ -3,191 +3,75 @@
 Curso: Informática
 Disciplina: Programação Web I
 Equipe:  Gleyce Vitória (2019322719), Guilherme dos Santos(2019322915), Rayane Quézia (2019322764), Silvia Michele(2019322693)
---> 
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="utf-8">
-	<title>Questão 5</title>
-	<link rel="stylesheet" type="text/css" href="css/q5.css">
+    <meta charset="utf-8">
+    <title>Questão 5</title>
+    <link rel="stylesheet" type="text/css" href="css/q5.css">
 </head>
+
 <body>
-	<header>
-		<span id="eq">Equipe E</span>
-		<span id="if">IFAL</span>
-	</header>
-	<!-- Crie um programa que entre com os dados de altura, peso, data de nascimento e sexo de dez pessoas num formulário e salve num vetor de objetos ao clicar no
+    <header>
+        <span id="eq">Equipe E</span>
+        <span id="if">IFAL</span>
+    </header>
+    <!-- Crie um programa que entre com os dados de altura, peso, data de nascimento e sexo de dez pessoas num formulário e salve num vetor de objetos ao clicar no
 adicionar. Imprima na tela quantas pessoas são do sexo feminino e quantas
 pessoas são do sexo masculino. Mostre quem é o maior obeso e o mais
 desnutrido segundo o IMC. Crie uma função que calcula o IMC. -->
-	<div class="tables">
-		<table>
-			<tr>
-				<th>Maior IMC</th>
-				<th>Menor IMC</th>
-			</tr>
-			<tr>
-				<td id="maiorimc">valor</td>
-				<td id="menorimc">valor</td>
-			</tr>
-			<tr>
-				<td id="pessoamaiorimc">valor</td>
-				<td id="pessoamenorimc">valor</td>
-			</tr>
-		</table>
-		<table>
-			
-		</table>
-		<table>
-			<tr>
-				<th>Mulheres</th>
-				<th>Homens</th>
-			</tr>
-			<tr>
-				<td id="qtdm">valor</td>
-				<td id="qtdh">valor</td>
-			</tr>
-		</table>
-	</div>
-	<form action="#" id="form">
-		<div>
-			<p>Pessoa 1</p>
-			<label>Peso: <input type="text" id="peso1" ></label>
-			<br>
-			<label>Altura: <input type="text" id="altura1"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data1" ></label>
-			<br>
-			<select id="sexo1">
+    <div class="tables">
+        <table>
+            <tr>
+                <th>Maior IMC</th>
+                <th>Menor IMC</th>
+            </tr>
+            <tr>
+                <td id="maiorimc">valor</td>
+                <td id="menorimc">valor</td>
+            </tr>
+            <tr>
+                <td id="pessoamaiorimc">valor</td>
+                <td id="pessoamenorimc">valor</td>
+            </tr>
+        </table>
+        <table>
+
+        </table>
+        <table>
+            <tr>
+                <th>Mulheres</th>
+                <th>Homens</th>
+            </tr>
+            <tr>
+                <td id="qtdm">valor</td>
+                <td id="qtdh">valor</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div style="margin:10% 40%;">
+            <p>Pessoa 1</p>
+            <label>Peso: <input style="padding: 5px;" type="text" id="peso1" ></label>
+            <br>
+            <label>Altura: <input style="padding: 5px;" type="text" id="altura1"></label>
+            <br>
+            <label>Data de Nascimento: <input style="padding: 5px;" type="date" id="data1" ></label>
+            <br>
+            <select id="sexo1" style="padding: 5px;">
 				<option value="1">Feminino</option>
 				<option value="0">Masculino</option>
 			</select>
-		</div>
-		<div>
-			<p>Pessoa 2</p>
-			<label>Peso: <input type="text" id="peso2"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura2"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data2"></label>
-			<br>
-			<select id="sexo2">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 3</p>
-			<label>Peso: <input type="text" id="peso3"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura3"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data3"></label>
-			<br>
-			<select id="sexo3">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 4</p>
-			<label>Peso: <input type="text" id="peso4"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura4"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data4"></label>
-			<br>
-			<select id="sexo4">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 5</p>
-			<label>Peso: <input type="text" id="peso5"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura5"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data5"></label>
-			<br>
-			<select id="sexo5">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 6</p>
-			<label>Peso: <input type="text" id="peso6"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura6"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data6"></label>
-			<br>
-			<select id="sexo6">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 7</p>
-			<label>Peso: <input type="text" id="peso7"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura7"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data7"></label>
-			<br>
-			<select id="sexo7">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 8</p>
-			<label>Peso: <input type="text" id="peso8"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura8"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data8"></label>
-			<br>
-			<select id="sexo8">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 9</p>
-			<label>Peso: <input type="text" id="peso9"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura9"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data9"></label>
-			<br>
-			<select id="sexo9">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div>
-			<p>Pessoa 10</p>
-			<label>Peso: <input type="text" id="peso10"></label>
-			<br>
-			<label>Altura: <input type="text" id="altura10"></label>
-			<br>
-			<label>Data de Nascimento: <input type="date" id="data10"></label>
-			<br>
-			<select id="sexo10">
-				<option value="1">Feminino</option>
-				<option value="0">Masculino</option>
-			</select>
-		</div>
-		<div></div>
-		<div>
-			<input type="submit" value="adicionar" id="btn">
-		</div>
-	</form>
-	<button type="button"><a href="index.html">Voltar</a></button>
+            <div>
+                <input type="submit" onclick="adicionar()" value="adicionar" id="btn">
+            </div>
+        </div>
+    </div>
+    <button type="button"><a href="index.html">Voltar</a></button>
 </body>
 <script type="text/javascript" src="js/q5.js">
-
 </script>
+
 </html>

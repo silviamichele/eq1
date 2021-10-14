@@ -8,84 +8,83 @@ Matrícula: Gleyce:2019322719;
            Silvia : 2019322693;
            Guilherme:2019322915.
 */
-function imc(peso, altura){
-	return Math.round(peso / (altura * altura));
-}
 var form = document.getElementById("form");
+var vetor = Array();
+var maiorIMC = 0;
+var idMaiorIMC;
+var menorIMC = 0;
+var idMenorIMC;
+var numH = 0;
+var numM = 0;
 
-form.addEventListener("submit", function(stop) {
- 	var vetor = Array();
+function imc(peso, altura) {
+    return Math.round(peso / (altura * altura));
+}
 
- 	var maiorIMC = 0;
- 	var idMaiorIMC;
- 	
- 	var menorIMC = 0;
- 	var idMenorIMC;
- 	
- 	var numH = 0;
- 	var numM = 0;
+function qtd(sexo) {
+    if (sexo == 1) {
+        numM += 1;
+    } else {
+        numH += 1;
+    }
+}
 
- 	for(var x=1; x<=10; x++){
- 		var id = "pessoa "+x;
- 		var strPeso = "peso"+x;
- 		var strData = "data"+x;
- 		var strAltura = "altura"+x;
- 		var strSexo = "sexo"+x;
- 		
- 		peso = document.getElementById(strPeso).value;
- 		altura = document.getElementById(strAltura).value;
- 		sexo = document.getElementById(strSexo).value;
+function verificaIMC(calcIMC) {
+    let id = "pessoa " + (vetor.length + 1);
+    if (vetor.length == 0) {
+        menorIMC = calcIMC;
+        idMenorIMC = id;
 
- 		var calcIMC = imc(peso, altura);
+        maiorIMC = calcIMC;
+        idMaiorIMC = id;
+    }
+    if (calcIMC > maiorIMC) {
+        maiorIMC = calcIMC;
+        idMaiorIMC = id;
+    }
+    if (calcIMC < menorIMC) {
+        menorIMC = calcIMC;
+        idMenorIMC = id;
+    }
+}
 
-		if (x == 1){
-			menorIMC = calcIMC;
-			idMenorIMC = id;
+function informacoes() {
+    if (menorIMC >= 18.5) {
+        idMenorIMC = "Não há nenhum desnutrido.";
+        menorIMC = 0;
+    }
 
-			maiorIMC = calcIMC;
-			idMaiorIMC = id;
-		}
-		else if (calcIMC > maiorIMC){
-			maiorIMC = calcIMC;
-			idMaiorIMC = id;
-		}
-		else if (calcIMC < menorIMC){
-			menorIMC = calcIMC;
-			idMenorIMC = id;
-		}
+    if (maiorIMC <= 24.9) {
+        idMaiorIMC = "Não há nenhum obeso.";
+        maiorIMC = 0;
+    }
 
-		if (sexo == 1){
-			numM += 1;
-		}
-		else{
-			numH += 1;
-		}
- 		
- 		vetor.push({
- 			'id': id,
- 			'altura':altura,
- 			'peso': peso,
- 			'sexo': sexo,
- 			'data_nas': document.getElementById(strData).value,
- 		}
- 		)
- 		console.log(vetor.length);
- 	}
- 	if (menorIMC >= 18.5){
- 		idMenorIMC = "Não há nenhum desnutrido.";
- 		menorIMC = 0;
- 	}
+    document.getElementById("qtdm").innerHTML = numM;
+    document.getElementById("qtdh").innerHTML = numH;
+    document.getElementById("pessoamenorimc").innerHTML = idMenorIMC;
+    document.getElementById("pessoamaiorimc").innerHTML = idMaiorIMC;
+    document.getElementById("maiorimc").innerHTML = maiorIMC;
+    document.getElementById("menorimc").innerHTML = menorIMC;
+}
 
- 	if (maiorIMC <= 24.9){
- 		idMaiorIMC = "Não há nenhum obeso.";
- 		maiorIMC = 0;
- 	}
+function adicionar() {
+    let altura = document.getElementById("altura1").value;
+    let peso = document.getElementById("peso1").value;
+    let sexo = document.getElementById("sexo1").value;
+    let data = document.getElementById("data1").value;
+    let calcIMC = imc(peso, altura);
+    qtd(sexo);
+    verificaIMC(calcIMC);
 
-	document.getElementById("qtdm").innerHTML = numM;
-	document.getElementById("qtdh").innerHTML = numH;
-	document.getElementById("pessoamenorimc").innerHTML = idMenorIMC;
-	document.getElementById("pessoamaiorimc").innerHTML = idMaiorIMC;
-	document.getElementById("maiorimc").innerHTML = maiorIMC;
-	document.getElementById("menorimc").innerHTML = menorIMC;
-	stop.preventDefault();
-});
+    vetor.push({
+        'id': "pessoa " + vetor.length,
+        'altura': altura,
+        'peso': peso,
+        'sexo': sexo,
+        'data_nas': data,
+    })
+
+    if (vetor.length == 5) {
+        informacoes();
+    }
+}
